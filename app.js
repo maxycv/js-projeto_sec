@@ -1,34 +1,28 @@
-//let titulo = document.querySelector('h1');
-//titulo.innerHTML = 'jogo de adivinhaçao';
+// let titulo = document.querySelector('h1');
+// titulo.innerHTML = 'Jogo de adivinhação';
 
-//let Paragrafo = document.querySelector ('p');
-//Paragrafo.innerHTML = 'Escolha um numero entre 1 e 100';
+// let subtitulo = document.querySelector('p');
+// subtitulo.innerHTML = 'Escolha um número entre 1 e 100';
 
+exibirTextoNaTela('h1', 'Jogo de adivinhação');
+exibirTextoNaTela('p', 'Escolha um número entre 1 e 100');
 
-exibirTextoNatela('h1', 'jogo de adivinhaçao');
-exibirTextoNatela('p', 'escolha um numero de 1 a 100')
-
-function gerarNumeroAleatorio(){
-    return parseInt(Math.random() * 100) + 1;
-
-    // function dar a funçaom para o codigo
+function gerarNumeroAleatorio() {
+    return parseInt(Math.random() * 10) + 1;
 }
 
 let numeroSecreto = gerarNumeroAleatorio();
-console.log(numeroSecreto)
+console.log(numeroSecreto);
 
-
-function exibirTextoNatela(tag, texto){
+function exibirTextoNaTela(tag, texto) {
     let campo = document.querySelector(tag);
     campo.innerHTML = texto;
-
-    //document.querySelector (?) ??.innerHTML alterar o HTML pelo java scrip
 }
 
-function verificarChute(){
-let chute = parseInt (document.querySelector ('input'). value);
-console.log(chute === numeroSecreto);
+function verificarChute() {
+    let chute = parseInt(document.querySelector('input').value);
+    console.log(chute === numeroSecreto);
 }
-     
 
-
+//<h1>Jogo de adivinhação</h1>
+//<p>Escolha um número entre 1 e 100</p>
